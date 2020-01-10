@@ -3,10 +3,7 @@ package com.zapopan.academy.empleados.entities;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 @Entity
 @Getter
@@ -14,11 +11,13 @@ import javax.persistence.OneToOne;
 public class Empleado {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column
     private String primerNombre;
 
-    @OneToOne
+    @ManyToOne
+    @JoinColumn
     private TiposUsuario tiposUsuario;
 }
