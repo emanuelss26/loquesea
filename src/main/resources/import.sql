@@ -1,1 +1,1 @@
-insert into tipos_usuario (tipo) values ('USUARIO');
+insert into tipos_usuario (tipo) values ('EMPLEADO');

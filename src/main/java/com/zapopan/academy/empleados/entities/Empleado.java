@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Getter
@@ -20,4 +21,8 @@ public class Empleado {
     @ManyToOne
     @JoinColumn
     private TiposUsuario tiposUsuario;
+   
+    @ManyToMany
+    private List <Evento> eventos;
+
 }

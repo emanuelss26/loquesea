@@ -21,6 +21,5 @@ public class TiposUsuario {
     @OneToMany(mappedBy = "tiposUsuario")
     private List<Empleado> empleados;
 
-    @OneToMany(mappedBy = "tiposUsuario")
-    private List<Usuario> usuarios;
+   
 }
